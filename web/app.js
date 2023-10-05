@@ -77,6 +77,12 @@ import { SecondaryToolbar } from "web-secondary_toolbar";
 import { Toolbar } from "web-toolbar";
 import { ViewHistory } from "./view_history.js";
 
+const HOSTED_VIEWER_ORIGINS = [
+  "null",
+  "http://criticalmassbr.github.io",
+  "https://criticalmassbr.github.io",
+];
+
 const FORCE_PAGES_LOADED_TIMEOUT = 10000; // ms
 const WHEEL_ZOOM_DISABLED_TIMEOUT = 1000; // ms
 
@@ -2245,14 +2251,6 @@ const PDFViewerApplication = {
 
 // This was update to include dialog hosts
 if (typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")) {
-  const HOSTED_VIEWER_ORIGINS = [
-    "null",
-    "http://mozilla.github.io",
-    "https://mozilla.github.io",
-    "localhost:3002",
-    "dialog.qa",
-    "dialog.cm",
-  ];
   // eslint-disable-next-line no-var
   var validateFileURL = function (file) {
     if (!file) {
@@ -2260,7 +2258,6 @@ if (typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")) {
     }
     try {
       const viewerOrigin = new URL(window.location.href).origin || "null";
-      console.log("🚀 ~ validateFileURL ~ viewerOrigin:", viewerOrigin);
       if (HOSTED_VIEWER_ORIGINS.some(origin => viewerOrigin.includes(origin))) {
         // Hosted or local viewer, allow for any file locations
         return;
