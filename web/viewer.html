@@ -329,17 +329,35 @@ See https://github.com/adobe-type-tools/cmap-resources
                 <span id="numPages" class="toolbarLabel"></span>
               </div>
               <div id="toolbarViewerRight">
-<!--#if GENERIC-->
-                <button id="openFile" class="toolbarButton hiddenLargeView" title="Open File" tabindex="31" data-l10n-id="open_file">
+                <!--#if GENERIC-->
+                <button
+                  id="openFile"
+                  class="toolbarButton hiddenLargeView hiddenElement"
+                  title="Open File"
+                  tabindex="31"
+                  data-l10n-id="open_file"
+                >
                   <span data-l10n-id="open_file_label">Open</span>
                 </button>
-<!--#endif-->
+                <!--#endif-->
 
-                <button id="print" class="toolbarButton hiddenMediumView" title="Print" tabindex="32" data-l10n-id="print">
+                <button
+                  id="print"
+                  class="toolbarButton hiddenMediumView hiddenElement"
+                  title="Print"
+                  tabindex="32"
+                  data-l10n-id="print"
+                >
                   <span data-l10n-id="print_label">Print</span>
                 </button>
 
-                <button id="download" class="toolbarButton hiddenMediumView" title="Save" tabindex="33" data-l10n-id="save">
+                <button
+                  id="download"
+                  class="toolbarButton hiddenMediumView hiddenElement"
+                  title="Save"
+                  tabindex="33"
+                  data-l10n-id="save"
+                >
                   <span data-l10n-id="save_label">Save</span>
                 </button>
 
@@ -349,11 +367,33 @@ See https://github.com/adobe-type-tools/cmap-resources
                   <button id="editorFreeText" class="toolbarButton" disabled="disabled" title="Text" role="radio" aria-checked="false" aria-controls="editorFreeTextParamsToolbar" tabindex="34" data-l10n-id="editor_free_text2">
                     <span data-l10n-id="editor_free_text2_label">Text</span>
                   </button>
-                  <button id="editorInk" class="toolbarButton" disabled="disabled" title="Draw" role="radio" aria-checked="false" aria-controls="editorInkParamsToolbar" tabindex="35" data-l10n-id="editor_ink2">
+                  <button
+                    id="editorInk"
+                    class="toolbarButton hiddenElement"
+                    disabled="disabled"
+                    title="Draw"
+                    role="radio"
+                    aria-checked="false"
+                    aria-controls="editorInkParamsToolbar"
+                    tabindex="35"
+                    data-l10n-id="editor_ink2"
+                  >
                     <span data-l10n-id="editor_ink2_label">Draw</span>
                   </button>
-                  <button id="editorStamp" class="toolbarButton hidden" disabled="disabled" title="Add or edit images" role="radio" aria-checked="false" aria-controls="editorStampParamsToolbar" tabindex="36" data-l10n-id="editor_stamp1">
-                    <span data-l10n-id="editor_stamp1_label">Add or edit images</span>
+                  <button
+                    id="editorStamp"
+                    class="toolbarButton hidden hiddenElement"
+                    disabled="disabled"
+                    title="Add or edit images"
+                    role="radio"
+                    aria-checked="false"
+                    aria-controls="editorStampParamsToolbar"
+                    tabindex="36"
+                    data-l10n-id="editor_stamp1"
+                  >
+                    <span data-l10n-id="editor_stamp1_label"
+                      >Add or edit images</span
+                    >
                   </button>
                 </div>
 

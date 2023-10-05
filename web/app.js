@@ -2243,11 +2243,15 @@ const PDFViewerApplication = {
   },
 };
 
+// This was update to include dialog hosts
 if (typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")) {
   const HOSTED_VIEWER_ORIGINS = [
     "null",
     "http://mozilla.github.io",
     "https://mozilla.github.io",
+    "localhost:3002",
+    "dialog.qa",
+    "dialog.cm",
   ];
   // eslint-disable-next-line no-var
   var validateFileURL = function (file) {
@@ -2256,7 +2260,7 @@ if (typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")) {
     }
     try {
       const viewerOrigin = new URL(window.location.href).origin || "null";
-      if (HOSTED_VIEWER_ORIGINS.includes(viewerOrigin)) {
+      if (HOSTED_VIEWER_ORIGINS.some(origin => viewerOrigin.includes(origin))) {
         // Hosted or local viewer, allow for any file locations
         return;
       }
