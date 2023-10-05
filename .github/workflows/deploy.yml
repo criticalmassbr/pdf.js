@@ -3,7 +3,7 @@ name: Build and Deploy to GitHub Pages
 on:
   push:
     branches:
-      - feat/dialog
+      - faet/pdf-viewer
 
 jobs:
   build_and_deploy:
