@@ -81,6 +81,8 @@ const HOSTED_VIEWER_ORIGINS = [
   "null",
   "http://criticalmassbr.github.io",
   "https://criticalmassbr.github.io",
+  "http://pdf-viewer.dialog.cm",
+  "https://pdf-viewer.dialog.cm",
 ];
 
 const FORCE_PAGES_LOADED_TIMEOUT = 10000; // ms
